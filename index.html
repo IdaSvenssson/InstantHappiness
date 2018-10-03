@@ -1,19 +1,33 @@
 <!doctype html>
 <htlm lang=en>
   <head>
-  </head>
-  <meta charset=utf-8>
+    <meta charset=utf-8>
   <title>Wanna get instant happiness?</title>
   <link href="./main.css" rel="stylesheet" type="text/css">
+    </head>
     <body>
       <h1>Feeling blue? Click the pink button!</h1>
-      <img src="CuteCat.gif" alt="katt" height="500" width="500">
+      <img src="CuteCat.gif" alt="katt" height="500" width="500" align="center">
       <div class="inputSection">
-        <div>
+        <div class="inputs">
           <input placeholder="Smile:-)"></input>
         </div>
-        <button  style="background-color: pink">Add</button>
+        <button class="addOption">Add</button>
       </div>
+      <div class="resultSection"></div>
       <button>Go!</button>
+
+      <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script>
+      $(function() {
+        $(".resultSection").hide()
+
+        var add_option = function() {
+          $(".inputs").append("<input></input>")
+        }
+
+        $(".addOption").click(add_option)
+      })
+      </script>
     </body>
   </html>
